@@ -50,6 +50,7 @@ form.addEventListener("submit", function(event) {
   if (!text) return;
   tasks.push({id: String(Date.now()) + "-" + Math.random(), text: text, completed: false});
   taskInput.value = "";
+  charactersLeft.textContent = "120 characters remaining";
   saveTasks(); showTasks(); taskInput.focus();
 });
 showTasks();
@@ -58,4 +59,9 @@ document.getElementById("clearCompleted").addEventListener("click", function () 
   tasks = tasks.filter(task => !task.completed);
   saveTasks();
   showTasks();
+});
+
+const charactersLeft = document.getElementById("charactersLeft");
+taskInput.addEventListener("input", function () {
+  charactersLeft.textContent = (120 - taskInput.value.length) + " characters remaining";
 });
