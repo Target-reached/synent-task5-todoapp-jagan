@@ -206,3 +206,6 @@ li button:hover {
 
 #clearCompleted { margin: 8px 0; }
 #clearCompleted:disabled { opacity: .55; cursor: not-allowed; }
+
+button:focus-visible, input:focus-visible { outline: 3px solid #2856d9; outline-offset: 3px; }
+li:focus-within { background: #f1f5ff; border-radius: 8px; }
