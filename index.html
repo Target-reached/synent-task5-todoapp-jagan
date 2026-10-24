@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>My Tasks | To-Do App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header><strong>My Tasks</strong></header>
+    <main>
+        <section class="app card">
+            <h1>My Tasks</h1>
+            <p class="muted">Plan it. Do it. Check it off.</p>
+            <form id="taskForm"><label for="taskInput">Add a task</label>
+                <div class="row"><input id="taskInput" maxlength="120" placeholder="What needs to be done?"
+                        required><button type="submit">Add</button></div>
+            </form>
+            <p id="count" class="muted"></p>
+            <ul id="taskList" aria-label="Task list"></ul>
+            <p id="empty" class="muted">No tasks yet. Add your first task!</p>
+        </section>
+    </main>
+    <footer>Tasks are stored locally in this browser</footer>
+    <script src="script.js" defer></script>
+</body>
+
+</html>
