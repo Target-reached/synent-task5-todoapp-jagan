@@ -18,6 +18,7 @@ function showTasks() {
   taskList.replaceChildren();
   empty.hidden = tasks.length > 0;
   count.textContent = tasks.filter(task => task.completed).length + " of " + tasks.length + " completed";
+  document.getElementById("clearCompleted").disabled = !tasks.some(task => task.completed);
   for (const task of tasks) {
     const item = document.createElement("li");
     if (task.completed) item.classList.add("done");
@@ -51,3 +52,9 @@ form.addEventListener("submit", function(event) {
   saveTasks(); showTasks(); taskInput.focus();
 });
 showTasks();
+
+document.getElementById("clearCompleted").addEventListener("click", function () {
+  tasks = tasks.filter(task => !task.completed);
+  saveTasks();
+  showTasks();
+});

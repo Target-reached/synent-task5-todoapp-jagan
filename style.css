@@ -203,3 +203,6 @@ li button:hover {
         margin-top: 0
     }
 }
+
+#clearCompleted { margin: 8px 0; }
+#clearCompleted:disabled { opacity: .55; cursor: not-allowed; }
