@@ -18,7 +18,7 @@
                 <div class="row"><input id="taskInput" maxlength="120" placeholder="What needs to be done?"
                         required><button type="submit">Add</button></div>
             </form>
-            <p id="count" class="muted"></p>
+            <p id="count" class="muted" role="status" aria-live="polite"></p>
             <button type="button" id="clearCompleted">Clear completed tasks</button>
             <ul id="taskList" aria-label="Task list"></ul>
             <p id="empty" class="muted">No tasks yet. Add your first task!</p>
